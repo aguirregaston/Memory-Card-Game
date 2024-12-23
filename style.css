@@ -1,0 +1,78 @@
+:root {
+  --bg-one: #0f0f14;
+  --bg-two: #0f0f10;
+  --active: #d2f400;
+  --white: #fff;
+  --gray: #3a3a4d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, var(--bg-one), var(--bg-two));
+  color: var(--white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: var(--active);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.card:hover {
+  background: #c4e200;
+}
+
+.flipped {
+  background-color: var(--gray);
+  pointer-events: none;
+}
+
+.hidden {
+  border: 5px dashed var(--active);
+  background: transparent;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+span {
+  text-align: center;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--active);
+}
